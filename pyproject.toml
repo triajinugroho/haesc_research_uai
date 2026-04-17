@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "haesc-research"
+version = "0.1.0"
+description = "HAESC Model: Human-AI Empathic Service Communication in Indonesian Muslim Fashion Industry"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Kussusanti", email = "" },
+  { name = "Tri Aji Nugroho" },
+  { name = "Ruvira Arindita" },
+  { name = "Safira Hasna" },
+  { name = "Khairunnisa Syarief" },
+]
+keywords = ["HAESC", "empathic communication", "human-AI", "service communication", "SEM-PLS", "Muslim fashion"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Sociology",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0",
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "matplotlib>=3.7",
+  "seaborn>=0.12",
+  "factor-analyzer>=0.5",
+  "pingouin>=0.5",
+  "statsmodels>=0.14",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "pytest-cov>=4.1",
+  "ruff>=0.1",
+  "black>=23.0",
+]
+notebooks = [
+  "jupyterlab>=4.0",
+  "ipywidgets>=8.0",
+  "plotly>=5.17",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/triajinugroho/haesc_research_uai"
+"Research Group" = "https://uai.ac.id"
+"Target Journal" = "https://stars.library.ucf.edu/hmc/about.html"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["haesc*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=haesc --cov-report=term-missing"
