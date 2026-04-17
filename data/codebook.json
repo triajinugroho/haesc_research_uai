@@ -1,0 +1,75 @@
+{
+  "title": "HAESC Research – Survey Codebook",
+  "version": "1.0",
+  "date": "2026",
+  "institution": "Universitas Al Azhar Indonesia",
+  "variables": {
+    "SCREENING": [
+      {"code": "S1", "label": "Purchased Muslim fashion in last 6 months", "type": "binary", "values": {"1": "Yes", "0": "No"}, "eligibility": "Must be 1"},
+      {"code": "S2", "label": "Interacted with Muslim fashion brand CS", "type": "binary", "values": {"1": "Yes", "0": "No"}, "eligibility": "Must be 1"}
+    ],
+    "DEMOGRAPHICS": [
+      {"code": "D1", "label": "Age group", "type": "ordinal", "values": {"1": "<18", "2": "18-24", "3": "25-34", "4": "35-44", "5": "45-54", "6": "55+"}},
+      {"code": "D2", "label": "Gender", "type": "nominal", "values": {"1": "Male", "2": "Female", "3": "Other", "4": "Prefer not to say"}},
+      {"code": "D3", "label": "City", "type": "nominal", "values": {"1": "Jakarta", "2": "Bandung", "3": "Yogyakarta", "4": "Surabaya", "5": "Bali", "6": "Other"}},
+      {"code": "D4", "label": "Education", "type": "ordinal", "values": {"1": "SMA/SMK", "2": "Diploma", "3": "S1/Bachelor", "4": "S2/Master", "5": "S3/PhD", "6": "Other"}},
+      {"code": "D5", "label": "Shopping frequency per year", "type": "ordinal", "values": {"1": "1-2", "2": "3-5", "3": "6-10", "4": ">10"}},
+      {"code": "D6", "label": "Last service interaction type", "type": "nominal", "values": {"1": "Chatbot/AI", "2": "Human agent", "3": "Both (AI then human)", "4": "Not sure"}}
+    ],
+    "CONSTRUCT_X_HAESC": {
+      "dimension_SC": [
+        {"code": "SC1", "label": "Responsiveness", "type": "likert5", "construct": "X", "dimension": "Service Communication"},
+        {"code": "SC2", "label": "Personalisation", "type": "likert5", "construct": "X", "dimension": "Service Communication"},
+        {"code": "SC3", "label": "Tone appropriateness", "type": "likert5", "construct": "X", "dimension": "Service Communication"},
+        {"code": "SC4", "label": "Cultural sensitivity", "type": "likert5", "construct": "X", "dimension": "Service Communication"},
+        {"code": "SC5", "label": "Role-switch fluidity", "type": "likert5", "construct": "X", "dimension": "Service Communication"}
+      ],
+      "dimension_PIE": [
+        {"code": "PIE1", "label": "Affective empathy", "type": "likert5", "construct": "X", "dimension": "Perceived Interactional Empathy"},
+        {"code": "PIE2", "label": "Cognitive empathy", "type": "likert5", "construct": "X", "dimension": "Perceived Interactional Empathy"},
+        {"code": "PIE3", "label": "Empathic responsiveness", "type": "likert5", "construct": "X", "dimension": "Perceived Interactional Empathy"}
+      ],
+      "dimension_RT": [
+        {"code": "RT1", "label": "Integrity", "type": "likert5", "construct": "X", "dimension": "Relational Trust"},
+        {"code": "RT2", "label": "Reliability", "type": "likert5", "construct": "X", "dimension": "Relational Trust"},
+        {"code": "RT3", "label": "Benevolence", "type": "likert5", "construct": "X", "dimension": "Relational Trust"}
+      ]
+    },
+    "CONSTRUCT_M_BRAND_ATTACHMENT": {
+      "dimension_EC": [
+        {"code": "EC1", "label": "Emotional connection 1", "type": "likert5", "construct": "M", "dimension": "Emotional Connection"},
+        {"code": "EC2", "label": "Emotional connection 2", "type": "likert5", "construct": "M", "dimension": "Emotional Connection"}
+      ],
+      "dimension_BA": [
+        {"code": "BA1", "label": "Brand affection 1", "type": "likert5", "construct": "M", "dimension": "Brand Affection"},
+        {"code": "BA2", "label": "Brand affection 2", "type": "likert5", "construct": "M", "dimension": "Brand Affection"}
+      ],
+      "dimension_BP": [
+        {"code": "BP1", "label": "Brand passion 1", "type": "likert5", "construct": "M", "dimension": "Brand Passion"},
+        {"code": "BP2", "label": "Brand passion 2", "type": "likert5", "construct": "M", "dimension": "Brand Passion"}
+      ]
+    },
+    "CONSTRUCT_Y_CUSTOMER_SATISFACTION": {
+      "dimension_OS": [
+        {"code": "OS1", "label": "Overall satisfaction 1", "type": "likert5", "construct": "Y", "dimension": "Overall Satisfaction"},
+        {"code": "OS2", "label": "Overall satisfaction 2", "type": "likert5", "construct": "Y", "dimension": "Overall Satisfaction"}
+      ],
+      "dimension_EXC": [
+        {"code": "EXC1", "label": "Expectation confirmation 1", "type": "likert5", "construct": "Y", "dimension": "Expectation Confirmation"},
+        {"code": "EXC2", "label": "Expectation confirmation 2", "type": "likert5", "construct": "Y", "dimension": "Expectation Confirmation"}
+      ],
+      "dimension_PR": [
+        {"code": "PR1", "label": "Problem resolution satisfaction 1", "type": "likert5", "construct": "Y", "dimension": "Satisfaction with Problem Resolution"},
+        {"code": "PR2", "label": "Problem resolution satisfaction 2", "type": "likert5", "construct": "Y", "dimension": "Satisfaction with Problem Resolution"}
+      ]
+    }
+  },
+  "missing_value_code": 99,
+  "scale": {
+    "type": "Likert",
+    "min": 1,
+    "max": 5,
+    "labels_id": ["Sangat Tidak Setuju", "Tidak Setuju", "Netral", "Setuju", "Sangat Setuju"],
+    "labels_en": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+  }
+}
